@@ -1,0 +1,117 @@
+{
+  "name": "tjm",
+  "version": "1.0.0",
+  "description": "Theme for TJM Insurance",
+  "main": "package.json",
+  "license": "BSD-3-Clause",
+  "author": "Adapt A/S",
+  "scripts": {
+    "start": "npm-run-all --parallel watch:gulp watch:webpack browserSync",
+    "watch": "npm-run-all --parallel watch:gulp watch:webpack",
+    "watch:gulp": "gulp default",
+    "watch:webpack": "webpack --config config/webpack.dev.js",
+    "watch:sassdoc": "gulp doc",
+    "build": "rm -rf dist && npm-run-all build:gulp build:webpack",
+    "build:gulp": "gulp scss",
+    "build:webpack": "webpack --config config/webpack.prod.js",
+    "doc": "npm-run-all --parallel watch:sassdoc watch:webpack",
+    "browserSync": "browser-sync start --config 'config/browsersync.js'",
+    "preinstall": "npm install -g browser-sync",
+    "ngrok": "ngrok http -host-header=dev.tjm-forsikring 80"
+  },
+  "bugs": {
+    "url": "https://github.com/adaptdk/tjm/issues"
+  },
+  "homepage": "https://github.com/adaptdk/tjm#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/adaptdk/tjm.git"
+  },
+  "jshintConfig": {
+    "esversion": 6
+  },
+  "esdoc": {
+    "source": "./src",
+    "destination": "./docs",
+    "plugins": [
+      {
+        "name": "esdoc-standard-plugin"
+      }
+    ]
+  },
+  "keywords": [
+    "TJM",
+    "adapt",
+    "mads-thines",
+    "Frontend",
+    "Compiling",
+    "Boilerplate",
+    "SCSS",
+    "JavaScript",
+    "Gulp",
+    "Webpack 3",
+    "Babel",
+    "esLint",
+    "Stylelint",
+    "nGrok",
+    "PostCSS"
+  ],
+  "devDependencies": {
+    "@babel/core": "7.0.0-beta.32",
+    "adapt-mixins": "2.0.7",
+    "autoprefixer": "7.2.1",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.3",
+    "babel-loader": "7.1.2",
+    "babel-plugin-syntax-trailing-function-commas": "6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-imports": "1.4.1",
+    "babel-plugin-transform-object-rest-spread": "6.26.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-es2016": "6.24.1",
+    "browser-sync": "2.18.13",
+    "compression-webpack-plugin": "^1.1.2",
+    "cssnano": "^4.0.0-rc.2",
+    "esdoc": "1.0.4",
+    "esdoc-standard-plugin": "1.0.0",
+    "eslint": "4.12.1",
+    "eslint-loader": "1.9.0",
+    "file-loader": "1.1.5",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "4.0.0",
+    "gulp-babel": "7.0.0",
+    "gulp-eslint": "4.0.0",
+    "gulp-gzip": "^1.4.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-postcss": "7.0.0",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.6.1",
+    "gulp-stylelint": "5.0.0",
+    "gulp-stylelint-sourcemap": "3.4.2",
+    "gulp-uglify": "3.0.0",
+    "gulp-util": "3.0.8",
+    "jquery": "^3.2.1",
+    "lodash": "4.17.4",
+    "ngrok": "2.2.24",
+    "node-sass": "4.7.2",
+    "node-sass-tilde-importer": "1.0.0",
+    "npm": "5.5.1",
+    "npm-run-all": "4.1.2",
+    "postcss-inline-svg": "3.0.0",
+    "sassdoc": "^2.5.0",
+    "stylelint": "8.3.1",
+    "stylelint-scss": "2.2.0",
+    "uglifyjs-webpack-plugin": "1.1.2",
+    "webpack": "3.9.1",
+    "webpack-merge": "4.1.1",
+    "webpack-stream": "4.0.0"
+  },
+  "dependencies": {
+    "normalize.css": "7.0.0",
+    "smooth-scroll": "^12.1.5",
+    "svg4everybody": "^2.1.9"
+  }
+}
