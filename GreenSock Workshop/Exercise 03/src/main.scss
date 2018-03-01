@@ -15,16 +15,21 @@
 /// Elements
 @import "elements/elements";
 
-// Custom Styling
-.loading {
-  .slide {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
 
-.slide02-active {
-  .nav a {
-    color: #ffffff;
-  }
+// Colors
+// Green #73C996
+// Red #F8876E
+// Orange #F8AD43
+// Dark Grey #8b9ea9
+// Medium Grey #C6D7E0
+
+// Custom Style
+
+h1,
+#BulbIdea,
+#Petr,
+#Coin,
+#stage {
+  visibility: hidden;
+  opacity: 0;
 }
