@@ -8,15 +8,26 @@ export let tlProjects, tlProject, tlProjectsCTA, tlProjectLoader, tlCircles;
 let projects = document.querySelector('.projects');
 let project = document.querySelectorAll('.project');
 
+// Global Selectors
+let projectImageBefore = CSSRulePlugin.getRule('.project-image:before');
+let projectImageAfter = CSSRulePlugin.getRule('.project-image:after');
+
 // Initialize the Timeline
 tlProjects = new TimelineMax();
 tlProject = new TimelineMax({ repeat: -1, repeatDelay: 2 });
 tlCircles = new TimelineMax({ repeat: -1 });
 tlProjects.set(projects, { autoAlpha: 1 });
 
-
 // Circles
-tlCircles;
+tlCircles
+.to(projectImageBefore, 0.8, { cssRule: { top: '5px' }, ease: Linear.easeNone })
+.to(projectImageBefore, 0.8, { cssRule: { left: '5px' }, ease: Linear.easeNone })
+.to(projectImageBefore, 0.8, { cssRule: { top: '-5px' }, ease: Linear.easeNone })
+.to(projectImageBefore, 0.8, { cssRule: { left: '-5px' }, ease: Linear.easeNone })
+.to(projectImageAfter, 0.7, { cssRule: { bottom: '6px' }, ease: Linear.easeNone }, '0')
+.to(projectImageAfter, 0.7, { cssRule: { right: '6px' }, ease: Linear.easeNone }, '0.7')
+.to(projectImageAfter, 0.7, { cssRule: { bottom: '-6px' }, ease: Linear.easeNone }, '1.1')
+.to(projectImageAfter, 0.7, { cssRule: { right: '-6px' }, ease: Linear.easeNone }, '1.5')
 
 // Project
 project.forEach((element) => {
@@ -40,8 +51,6 @@ project.forEach((element) => {
   const projectLinkText = element.querySelector('.bp-text');
   // Loader
   const loader = element.querySelector('.loader');
-  let projectImageBefore = CSSRulePlugin.getRule('.project-image:before');
-  let projectImageAfter = CSSRulePlugin.getRule('.project-image:after');
 
   // CTA
   tlProjectsCTA

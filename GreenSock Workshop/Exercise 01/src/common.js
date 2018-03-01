@@ -23,7 +23,7 @@ export const resumeProjects = () => {
 };
 
 // Resume the Project
-document.querySelector('.project00 .button').onclick = (e) => {
+document.querySelector('.project00 .button').addEventListener('click', (e) => {
   if (e.preventDefault) {
     e.preventDefault();
   } else {
@@ -31,4 +31,4 @@ document.querySelector('.project00 .button').onclick = (e) => {
   }
 
   resumeProjects();
-};
+});
