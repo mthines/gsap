@@ -1,6 +1,7 @@
 // Utilities
 import * as util from './common.js';
-import { TimelineMax, CSSRulePlugin } from "gsap";
+import { TimelineMax } from "gsap";
+import CSSRulePlugin from "gsap/CSSRulePlugin";
 
 // Variables
 export let tlProjects, tlProject, tlProjectsCTA, tlProjectLoader, tlCircles;
@@ -39,6 +40,8 @@ project.forEach((element) => {
   const projectLinkText = element.querySelector('.bp-text');
   // Loader
   const loader = element.querySelector('.loader');
+  let projectImageBefore = CSSRulePlugin.getRule('.project-image:before');
+  let projectImageAfter = CSSRulePlugin.getRule('.project-image:after');
 
   // CTA
   tlProjectsCTA
@@ -48,12 +51,12 @@ project.forEach((element) => {
 
   // Loader
   tlProjectLoader
-  //.to([projectImageBefore, projectImageAfter], 0.3, { cssRule: { opacity: 0 }, ease: Power4.easeInOut })
+  .to([projectImageBefore, projectImageAfter], 0.6, { cssRule: { opacity: 0 }, ease: Power3.easeInOut })
   .fromTo(loader, 5,
     { strokeDasharray: 547, strokeDashoffset: 547 },
     { strokeDasharray: 547, strokeDashoffset: 0, ease: Power0.easeNone })
-  .to(loader, 0.5, { autoAlpha: 0, onComplete: util.resumeProjects });
-  //.to([projectImageBefore, projectImageAfter], 0.3, { cssRule: { opacity: 1 }, ease: Power4.easeInOut }, '-=0.4');
+  .to(loader, 0.5, { autoAlpha: 0, onComplete: util.resumeProjects })
+  .to([projectImageBefore, projectImageAfter], 0.6, { cssRule: { opacity: 1 }, ease: Power3.easeInOut }, '-=0.4');
 
   // Main
   tlProject
