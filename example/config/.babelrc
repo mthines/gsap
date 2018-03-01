@@ -1,0 +1,9 @@
+{
+  "presets": [
+    "es2015",
+    "babel-plugin-transform-class-properties"
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

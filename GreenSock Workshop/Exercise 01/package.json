@@ -1,7 +1,7 @@
 {
-  "name": "tjm",
+  "name": "project",
   "version": "1.0.0",
-  "description": "Theme for TJM Insurance",
+  "description": "Compiler by Mads Thines",
   "main": "package.json",
   "license": "BSD-3-Clause",
   "author": "Adapt A/S",
@@ -19,14 +19,6 @@
     "preinstall": "npm install -g browser-sync",
     "ngrok": "ngrok http -host-header=dev.tjm-forsikring 80"
   },
-  "bugs": {
-    "url": "https://github.com/adaptdk/tjm/issues"
-  },
-  "homepage": "https://github.com/adaptdk/tjm#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/adaptdk/tjm.git"
-  },
   "jshintConfig": {
     "esversion": 6
   },
@@ -40,7 +32,6 @@
     ]
   },
   "keywords": [
-    "TJM",
     "adapt",
     "mads-thines",
     "Frontend",

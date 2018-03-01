@@ -1,3 +1,4 @@
+@import "vendor/vendor";
 //
 /// Settings
 @import "settings/settings";
@@ -13,17 +14,3 @@
 //
 /// Elements
 @import "elements/elements";
-
-.center {
-  text-align: center;
-  margin-top: 5%;
-}
-
-.circle {
-  $size: 150px;
-  display: inline-block;
-  width: $size;
-  height: $size;
-  background-color: #6AED74;
-  border-radius: 50%;
-}
