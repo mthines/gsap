@@ -1,0 +1,17 @@
+// stylelint-disable
+// Layout Variables
+$base-gutter: 20px;
+$base-leading: 20px;
+
+// Visual Variables
+$base-size: 16px;
+$base-border: 1px solid $color-lighterBlue;
+$base-radius: 3px;
+$base-trans: 0.3s ease-in-out;
+$base-trans-links: 0.15s ease-in-out;
+$base-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+
+// Breakpoints
+$small: 400px;
+$medium: 700px;
+$large: 1024px;

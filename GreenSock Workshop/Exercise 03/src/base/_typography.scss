@@ -1,0 +1,81 @@
+
+h1,
+h2 {
+  font-weight: $fw-light;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $fw-bold;
+}
+
+// Creates the default typography settings for headers looping over the header variable in settings-typography
+@each $hS in $headerSize {
+  $headerSize-index: nth($hS, 1); // HS (Header Size) Index
+  $headerSize-value: nth($hS, 2); // HS (Header Size) font size
+
+  h#{$headerSize-index},
+  .headline-#{$headerSize-index} {
+    font-size: $headerSize-value;
+    margin: $headerSize-value 0 $headerSize-value/4;
+
+    @media (min-width: 400px) {
+      font-size: $headerSize-value*1.1;
+    }
+
+    // At Large Breakpoint, make h1 bigger than the rest
+    @media (min-width: 800px) {
+      @if $headerSize-index == 1 or $headerSize-index == 2 {
+        font-size: $headerSize-value*1.5;
+      } @else {
+        font-size: $headerSize-value*1.25;
+      }
+    }
+  }
+}
+
+// Paragraph
+p {
+  margin: 0;
+
+  + p {
+    margin-top: $font-size/1.25;
+  }
+
+  a {
+    transition: color $base-trans-links;
+
+    &:focus,
+    &:hover {
+      color: $color-black;
+      outline: none;
+    }
+
+    // Text elements inside of a A tag should have normal colors
+    &:not(.button) {
+      span,
+      p {
+        color: $color-black;
+      }
+    }
+  }
+}
+
+// Link
+a {
+  cursor: pointer;
+  color: $color-orange;
+  text-decoration: none;
+}
+
+// Strong/Important
+strong {
+  font-weight: $fw-bold;
+}
+
+// Emphasised
+em {
+  font-style: italic;
+}
