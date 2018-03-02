@@ -224,8 +224,6 @@ const getFilledTubesTl = () => {
   .add('textDone')
 
   // Adding liquid to flasks
-  .set(liquidInside2, { attrfill: '#366666' })
-
   .to(liquidInsideMask1, 6, { attr: { y: 415 }, ease: Power1.easeIn }, 'flask01-=0.8')
   .to(liquidInsideMask2, 3, { attr: { y: 451 }, ease: Power1.easeIn }, 'flask02-=0.8')
   .to(liquidInsideMask3, 3, { attr: { y: 452 }, ease: Power1.easeIn }, 'flask03-=0.8')
@@ -255,6 +253,7 @@ const getOutroTl = () => {
       clamp: false
     })
   })
+
   .add('paper-out')
   // Set Text
   .set(h1, { scale: 0.8, text: "Thanks for watching my animation" }, '-=0.5')
