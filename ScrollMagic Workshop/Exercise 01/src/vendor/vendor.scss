@@ -1,0 +1,321 @@
+// stylelint-disable
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/* ===== ScrollMagic Class ==============================================
+   Author: Petr Tichy - ihatetomatoes.net
+   ========================================================================== */
+
+body {
+  font: 16px/1.5 'Raleway', Helvetica, Helvetica Neue, Arial, sans-serif; }
+
+.wrapper {
+  max-width: 350px;
+  margin: 0 10%; }
+
+/* Make the body 100% of the browser viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 0;
+  font-family: 'Roboto Condensed', Helvetica, Helvetica Neue, Arial, sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* =Main */
+p {
+  font-size: 16px;
+}
+
+#slide01, #slide03, #slide05 {
+  background-color: #FFFFFF;
+}
+
+#slide00, #slide02, #slide04 {
+  background-color: #EDEDED;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+.slide .pin-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.slide .wrapper {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+}
+.slide .img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 418px;
+  background: url(../images/img_macbook01.png) no-repeat top left;
+  transform: translate(-80%, -40%);
+}
+
+#slide02 .img {
+  background-image: url(../images/img_macbook02.png);}
+
+#slide03 .img {
+  background-image: url(../images/img_macbook01.png);}
+
+#slide04 .img {
+  background-image: url(../images/img_macbook02.png);}
+
+/* =Footer */
+.footer-container {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: #06060d;
+}
+.footer-container .wrapper {
+  width: 80%;
+  max-width: none;
+  margin: 0 10%;
+}
+.footer-container h3 {
+  margin: 0;
+  padding: 20px 0;
+  font-weight: normal;
+}
+.footer-container a {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* =General */
+
+  /* =Header */
+
+  /* =Footer */
+}
+
+@media only screen and (min-width: 768px) {
+  /* =General */
+
+  /* =Header */
+
+  /* =Footer */
+}
+
+@media only screen and (min-width: 1140px) {
+  /* =General */
+
+  /* =Header */
+
+  /* =Footer */
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

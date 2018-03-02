@@ -1,0 +1,36 @@
+@import "vendor/vendor";
+//
+/// Settings
+@import "settings/settings";
+//
+/// Base
+@import "base/base";
+//
+/// Layout
+@import "layout/layout";
+//
+/// Components
+@import "components/components";
+//
+/// Elements
+@import "elements/elements";
+
+// Custom Styling
+
+.scrollmagic-pin-spacer {
+  clip-path: inset(0 0);
+}
+
+.pin-wrapper {
+  @at-root #slide02 & {
+    transform: translateY(-100%);
+  }
+
+  @at-root #slide03 & {
+    transform: translateY(-100%);
+  }
+
+  @at-root #slide04 & {
+    transform: translateY(-100%);
+  }
+}

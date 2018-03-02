@@ -1,0 +1,378 @@
+// stylelint-disable
+
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+img,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+
+/* ===== ScrollMagic Class ==============================================
+   Author: Petr Tichy - ihatetomatoes.net
+   ========================================================================== */
+
+body {
+  font: 16px/1.5 'Raleway', Helvetica, Helvetica Neue, Arial, sans-serif;
+  background-color: #FFF6ED;
+  color: #222222;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+/* =General */
+h1 {
+  font-size: 25px;
+  line-height: 35px;
+  margin-top: 0;
+}
+.intro {
+  font-size: 16px;
+  line-height: 20px;
+  opacity: 0.8;
+  margin: 0 auto;
+}
+.intro-img img {
+  max-width: 90%;
+}
+.section-static {
+  padding: 40px 0;
+  background-color: #fff;
+}
+.bcg-blue {
+  background-color: #E8F4FF;
+}
+.bcg-green {
+  background-color: #D0FDEF;
+}
+
+/* =Header */
+header {
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* =Footer */
+footer {
+  text-align: center;
+  font-size: 14px;
+  background-color: #e6e9ed;
+}
+footer a {
+  text-decoration: none;
+  color: #222222;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+  /* =General */
+
+  /* =Header */
+
+  /* =Footer */
+}
+
+@media only screen and (min-width: 768px) {
+  /* =General */
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-top: 0;
+  }
+  .intro {
+    font-size: 24px;
+    line-height: 34px;
+    opacity: 0.8;
+    max-width: 40%;
+    margin: 0 auto 40px auto;
+  }
+  .intro-img {
+    max-width: 80%;
+    text-align: center;
+    margin: 0 auto ;
+  }
+  .intro-img img {
+    max-width: 70%;
+  }
+  .section-static {
+    padding: 100px 0;
+    text-align: center;
+  }
+  .bcg-white {
+    background: #fff;
+    height: 60vh;
+  }
+
+  #reveal-effect {
+    text-align: center;
+  }
+  .subtitle {
+    font-size: 1.5em;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .parts {
+    list-style: none;
+    margin: 100px 0 0 0;
+    padding: 0;
+  }
+  .parts li {
+    margin-bottom: 60px;
+    overflow: hidden;
+    background: url('../images/img_pen.png') no-repeat 50% 0;
+    background-size: 90px auto;
+  }
+  .parts h2 {
+    width: 40%;
+    margin: 0;
+    float: left;
+    text-align: right;
+    vertical-align: top;
+    /*background-color: pink;*/
+  }
+  .parts p {
+    font-size: 18px;
+    width: 25%;
+    margin: 0 0 0 20%;
+    float: left;
+    text-align: left;
+    /*background-color: yellow;*/
+  }
+  .parts li.part1 {
+    background-position: 50% 6px;
+    min-height: 110px;
+  }
+  .parts li.part2 {
+    background-position: 50% -221px;
+    min-height: 370px;
+  }
+
+  /* this is the pen body */
+  .parts li.part3 {
+    background: url('../images/img_pen-body.png') no-repeat 50% 0;
+    background-size: 90px auto;
+    min-height: 580px;
+  }
+  .parts li.part4 {
+    background-position: 50% -618px;
+    min-height: 430px;
+
+  }
+  .parts li.part5 {
+    background-position: 50% -1154px;
+    min-height: 150px;
+  }
+  .parts li.part6 {
+    background-position: 50% -1437px;
+    min-height: 150px;
+  }
+
+  /* =Header */
+  header {
+    padding: 100px 0;
+  }
+
+
+  /* =Footer */
+}
+
+@media only screen and (min-width: 1140px) {
+  /* =General */
+
+  /* =Header */
+
+  /* =Footer */
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

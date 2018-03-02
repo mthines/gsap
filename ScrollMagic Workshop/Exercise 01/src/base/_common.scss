@@ -1,0 +1,46 @@
+// General
+* {
+  box-sizing: border-box;
+}
+
+// Html
+html {
+  font-size: 16px; // Defines the REM
+  height: auto;
+}
+
+// Body
+body {
+  line-height: $lh-normal;
+  font-weight: $fw-light;
+  letter-spacing: $font-size/40;
+  font-style: normal;
+  color: $color-black;
+  background-color: $color-white;
+  margin: 0;
+  vertical-align: top;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; // stylelint-disable-line
+  -moz-osx-font-smoothing: grayscale; // stylelint-disable-line
+  transition: background-color 0.6s ease-in-out;
+
+  &.is-active {
+    background-color: $color-turquoise;
+  }
+}
+
+// Media
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+// Horizontal Line
+hr {
+  width: 100%;
+}
+
+// Figure
+figure {
+  margin: 0;
+}

@@ -1,0 +1,24 @@
+// stylelint-disable
+// Primary Colours
+$color-orange:          #E94E1B; // Orange
+$color-peach:           #EF7A39; // Peach
+
+// Secondary Colours
+$color-white:           #FFFFFF; // White
+$color-lightBlue:       #B5CDDB; // Light Blue
+$color-turquoise:       #b1e2ea; // Turquoise
+$color-darkBlue:        #00374F; // Dark Blue
+$color-black:           #09181C; // Black
+
+// Color Variants
+$color-lighterBlue:     lighten($color-lightBlue, 12%);      // Lighter Grey
+$color-lightestBlue:    lighten($color-lightBlue, 17.2%);    // Lightest Grey
+
+// Base Grey
+$color-grey:            #868686; // Base Grey
+$color-lightGrey:       lighten($color-grey, 43%);           // Light Grey
+$color-darkGrey:        darken($color-grey, 33%);            // Dark Grey
+
+// Overlay colors
+$color-overlay:         rgba(0, 0, 0, 0.5);
+$color-transparent:     rgba(255, 255, 255, 0);
