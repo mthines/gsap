@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-  color: #222;
+  color: #222222;
 }
 
 html {
@@ -29,7 +29,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #cccccc;
   margin: 1em 0;
   padding: 0;
 }
@@ -53,11 +53,10 @@ textarea {
 
 .browsehappy {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+  background: #cccccc;
+  color: #000000;
   padding: 0.2em 0;
 }
-
 
 /* ===== ScrollMagic Class ==============================================
    Author: Petr Tichy - ihatetomatoes.net
@@ -65,7 +64,7 @@ textarea {
 
 body {
   font: 16px/1.5 'Raleway', Helvetica, Helvetica Neue, Arial, sans-serif;
-  background-color: #FFF6ED;
+  background-color: #fff6ed;
   color: #222222;
 }
 
@@ -83,24 +82,29 @@ h1 {
   line-height: 35px;
   margin-top: 0;
 }
+
 .intro {
   font-size: 16px;
   line-height: 20px;
   opacity: 0.8;
   margin: 0 auto;
 }
+
 .intro-img img {
   max-width: 90%;
 }
+
 .section-static {
   padding: 40px 0;
-  background-color: #fff;
+  background-color: #ffffff;
 }
+
 .bcg-blue {
-  background-color: #E8F4FF;
+  background-color: #e8f4ff;
 }
+
 .bcg-green {
-  background-color: #D0FDEF;
+  background-color: #d0fdef;
 }
 
 /* =Header */
@@ -115,14 +119,15 @@ footer {
   font-size: 14px;
   background-color: #e6e9ed;
 }
+
 footer a {
   text-decoration: none;
   color: #222222;
 }
+
 footer a:hover {
   text-decoration: underline;
 }
-
 
 /* ==========================================================================
    Media Queries
@@ -153,7 +158,7 @@ footer a:hover {
   .intro-img {
     max-width: 80%;
     text-align: center;
-    margin: 0 auto ;
+    margin: 0 auto;
   }
   .intro-img img {
     max-width: 70%;
@@ -163,7 +168,7 @@ footer a:hover {
     text-align: center;
   }
   .bcg-white {
-    background: #fff;
+    background: #ffffff;
     height: 60vh;
   }
 
@@ -185,6 +190,7 @@ footer a:hover {
     overflow: hidden;
     background: url('../images/img_pen.png') no-repeat 50% 0;
     background-size: 90px auto;
+    transition: transform 0.15s linear;
   }
   .parts h2 {
     width: 40%;
@@ -192,7 +198,7 @@ footer a:hover {
     float: left;
     text-align: right;
     vertical-align: top;
-    /*background-color: pink;*/
+    //background-color: pink;
   }
   .parts p {
     font-size: 18px;
@@ -200,7 +206,7 @@ footer a:hover {
     margin: 0 0 0 20%;
     float: left;
     text-align: left;
-    /*background-color: yellow;*/
+    //background-color: yellow;
   }
   .parts li.part1 {
     background-position: 50% 6px;
@@ -216,26 +222,58 @@ footer a:hover {
     background: url('../images/img_pen-body.png') no-repeat 50% 0;
     background-size: 90px auto;
     min-height: 580px;
+    z-index: 3;
+    position: relative;
   }
   .parts li.part4 {
     background-position: 50% -618px;
     min-height: 430px;
-
   }
   .parts li.part5 {
     background-position: 50% -1154px;
     min-height: 150px;
+    z-index: 2;
+    position: relative;
   }
   .parts li.part6 {
     background-position: 50% -1437px;
     min-height: 150px;
   }
 
+  .parts {
+    li {
+      h2,
+      p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0s ease 0.3s;
+      }
+
+      &.fade-in {
+        h2,
+        p {
+          opacity: 1;
+          visibility: visible;
+          transform: translateX(0);
+          transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+      }
+
+      h2 {
+        transform: translateX(-20px);
+      }
+
+      p {
+        transform: translateX(20px);
+        transition-delay: 0.15s;
+      }
+    }
+  }
+
   /* =Header */
   header {
     padding: 100px 0;
   }
-
 
   /* =Footer */
 }
@@ -317,7 +355,7 @@ footer a:hover {
 @media print {
   * {
     background: transparent !important;
-    color: #000 !important;
+    color: #000000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -343,7 +381,7 @@ footer a:hover {
 
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 1px solid #999999;
     page-break-inside: avoid;
   }
 

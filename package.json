@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "scrollmagic": "^2.0.5"
+  "devDependencies": {
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10"
   }
 }
