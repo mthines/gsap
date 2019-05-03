@@ -25,8 +25,8 @@ TweenMax.set(part6, { y: -846 });
 const bodyToStart = new TweenMax.to(part3, 1, { y: 0, ease: Linear.easeNone });
 const bodyToStartScene = new ScrollMagic.Scene({
   triggerElement: part1,
-  triggerHook: 0.6,
-  offset: -100,
+  triggerHook: 1,
+  offset: 320,
   duration: 572,
 })
 .setTween(bodyToStart)
@@ -35,8 +35,8 @@ const bodyToStartScene = new ScrollMagic.Scene({
 const p4ToBottom = new TweenMax.to(part4, 1, { y: 0, ease: Linear.easeNone });
 const p4ToBottomScene = new ScrollMagic.Scene({
   triggerElement: part1,
-  triggerHook: 0.1,
-  offset: 150,
+  triggerHook: 0.3,
+  offset: 750,
   duration: 557,
 })
 .setTween(p4ToBottom)
@@ -45,8 +45,8 @@ const p4ToBottomScene = new ScrollMagic.Scene({
 const p5ToBottom = new TweenMax.to(part5, 1, { y: 0, ease: Linear.easeNone });
 const p5ToBottomScene = new ScrollMagic.Scene({
   triggerElement: part1,
-  triggerHook: 0.1,
-  offset: 150,
+  triggerHook: 0.3,
+  offset: 750,
   duration: 726,
 })
 .setTween(p5ToBottom)
@@ -55,8 +55,8 @@ const p5ToBottomScene = new ScrollMagic.Scene({
 const p6ToBottom = new TweenMax.to(part6, 1, { y: 0, ease: Linear.easeNone });
 const p6ToBottomScene = new ScrollMagic.Scene({
   triggerElement: part1,
-  triggerHook: 0.1,
-  offset: 150,
+  triggerHook: 0.3,
+  offset: 750,
   duration: 846,
 })
 .setTween(p6ToBottom)
@@ -69,5 +69,6 @@ parts.forEach((element) => {
     triggerHook: 0.55,
   })
   .setClassToggle(element, 'fade-in')
+  .addIndicators()
   .addTo(controller);
 })

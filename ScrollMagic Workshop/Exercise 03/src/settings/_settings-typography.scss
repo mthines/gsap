@@ -1,0 +1,35 @@
+// stylelint-disable
+
+// Font Family
+$f-Verdana: "Verdana", Helvetica, sans-serif;
+
+// Font Weight
+$fw-light: 300;
+$fw-regular: 400;
+$fw-bold: 700;
+
+// Font Spacing
+$lh-small: 1.2;
+$lh-normal: 1.4;
+
+// Font Sizes
+$font-size-tiny: 0.65rem;
+$font-size-small: 0.75rem;
+$font-size: 0.9rem;
+$base-size: 1rem;
+$h6-size: 1.1rem;
+$h5-size: 1.15rem;
+$h4-size: 1.2rem;
+$h3-size: 1.3rem;
+$h2-size: 1.5rem;
+$h1-size: 1.7rem;
+
+// $Heading sizes (WARN: Do not change order of the list)
+$headerSize: (
+  6: $h6-size,
+  5: $h5-size,
+  4: $h4-size,
+  3: $h3-size,
+  2: $h2-size,
+  1: $h1-size,
+);

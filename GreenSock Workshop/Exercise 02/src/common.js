@@ -17,9 +17,9 @@ export const init = () => {
 
 // Scroll Animation
 export const scrollToSection = (sectionFrom, sectionTo) => {
-  const tlDown = new TimelineLite({ onComplete: setActiveSection(sectionFrom, sectionTo) }),
+  const tlDown = new TimelineLite({ onComplete: setActiveSection, onCompleteParams: [sectionFrom, sectionTo] }),
     tlUp = new TimelineLite(),
-    tlRight = new TimelineLite({ onComplete: setActiveSection(sectionFrom, sectionTo) }),
+    tlRight = new TimelineLite({ onComplete: setActiveSection, onCompleteParams: [sectionFrom, sectionTo] }),
     tlLeft = new TimelineLite();
 
   const heading = sectionTo.querySelector('h1'),
