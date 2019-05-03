@@ -1,0 +1,112 @@
+.base {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  padding: 0 20px;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity $ts-quick;
+  opacity: 0.3;
+  color: white;
+  text-transform: uppercase;
+
+  > * {
+    &:nth-child(1n + 2) {
+      margin-left: $l-gutter/2;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &Button {
+    font-weight: 300;
+    appearance: none;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.spinner {
+  opacity: 0;
+  position: absolute;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  letter-spacing: 4px;
+  font-size: 5rem;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 0px 12px,
+    rgba(255, 255, 255, 0.7) 0px 0px 4px, rgba(255, 255, 255, 0.8) 0px 0px 72px;
+  // filter: blur(0.8px);
+  filter: blur(2px);
+  position: absolute;
+  white-space: nowrap;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &Letter {
+    opacity: 0;
+  }
+
+  &Finish {
+    animation: blurIn 2s ease-in-out 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes blurIn {
+  0%,
+  30%,
+  60%,
+  80% {
+    filter: blur(8px);
+  }
+  0%,
+  10%,
+  70% {
+    filter: blur(0.8px);
+  }
+
+  20%,
+  40%,
+  60% {
+    filter: blur(3px);
+  }
+
+  100% {
+    filter: blur(0px);
+  }
+}
